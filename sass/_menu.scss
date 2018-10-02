@@ -5,17 +5,15 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    max-width: 1600px;
+    z-index: 100;
+//    max-width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 6vw;
+    padding: 0 6vw;
     height: 75px;
     background-color: $primary-color;
-    
-    .menu-margin {
-        
-    }
+
     
     // MENU - logo ------------------------------------------------------
     img {
