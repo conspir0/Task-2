@@ -1,0 +1,8 @@
+$primary-color: #fff;
+$secondary-color: #191347;
+$third-color: #bc004c;
+$fourth-color: #22b5eb;
+
+@mixin easeOut {
+    transition: all 0.2s ease-out;
+}

@@ -1,0 +1,96 @@
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 88vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 6vw;
+  height: 75px;
+  background-color: #fff;
+}
+
+#menu img {
+  display: flex;
+  margin: auto 0;
+  padding: .6rem 0;
+  height: 100%;
+}
+
+#menu .menu {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+#menu .menu .menu-main-link {
+  color: #191347;
+  align-items: center;
+}
+
+#menu .menu .menu-main-link a {
+  display: flex;
+  align-items: center;
+  padding: 1.7rem 1rem;
+  height: 100%;
+  line-height: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: #191347;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s ease-out;
+}
+
+#menu .menu .menu-main-link a .arrow-down {
+  width: 0;
+  height: 0;
+  margin-left: .3rem;
+  border-left: .25rem solid transparent;
+  border-right: .25rem solid transparent;
+  border-top: .25rem solid;
+}
+
+#menu .menu .menu-main-link a:hover {
+  background: #f2f2f2;
+  color: #bc004c;
+}
+
+#menu .menu .menu-main-link:last-child {
+  display: flex;
+  list-style-type: none;
+}
+
+#menu .menu .menu-main-link:last-child .menu-ticket a {
+  padding: .5rem 1rem;
+  background-color: #bc004c;
+  color: #fff;
+}
+
+#menu .menu .menu-main-link:last-child .menu-ticket a:hover {
+  background: #a30042;
+}
+
+#menu .menu .menu-main-link:last-child .menu-lang a {
+  margin: 1rem;
+  padding: .3rem;
+  border: 3px solid #e6e6e6;
+}
+
+#menu .menu .menu-main-link:last-child .menu-lang a:hover {
+  background: 3px solid #f2f2f2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
