@@ -1,11 +1,11 @@
-// Menu ------------------------------------------------------
+// MENU ------------------------------------------------------
 
-#menu {
+nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 88vw;
+    max-width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,7 +13,11 @@
     height: 75px;
     background-color: $primary-color;
     
-    // Menu - logo ------------------------------------------------------
+    .menu-margin {
+        
+    }
+    
+    // MENU - logo ------------------------------------------------------
     img {
         display: flex;
         margin: auto 0;
@@ -21,7 +25,7 @@
         height: 100%;
     }
     
-    // Menu - boxes ------------------------------------------------------
+    // MENU - boxes ------------------------------------------------------
     .menu {
         background-color: $primary-color;
         display: flex;
@@ -47,7 +51,7 @@
                 font-size: 14px;
                 @include easeOut;
                 
-                // Menu - boxes(arrow) ------------------------------------------------------
+                // MENU - boxes(arrow) ------------------------------------------------------
                 .arrow-down {
                     width: 0; 
                     height: 0;
@@ -64,12 +68,12 @@
                 }
             }
             
-            // Menu - different boxes ------------------------------------------------------
+            // MENU - different boxes ------------------------------------------------------
             &:last-child {
                 display: flex;
                 list-style-type: none;
                 
-                // Menu - box Ticket ------------------------------------------------------
+                // MENU - box Ticket ------------------------------------------------------
                 .menu-ticket a {
                     padding: .5rem 1rem;
                     background-color: $third-color;
@@ -80,7 +84,7 @@
                     }
                 }
                 
-                // Menu - box Language ------------------------------------------------------
+                // MENU - box Language ------------------------------------------------------
                 .menu-lang a {
                     margin: 1rem;
                     padding: .3rem;

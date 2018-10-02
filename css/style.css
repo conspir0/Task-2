@@ -1,9 +1,9 @@
-#menu {
+nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 88vw;
+  max-width: 1600px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,14 +12,14 @@
   background-color: #fff;
 }
 
-#menu img {
+nav img {
   display: flex;
   margin: auto 0;
   padding: .6rem 0;
   height: 100%;
 }
 
-#menu .menu {
+nav .menu {
   background-color: #fff;
   display: flex;
   flex-direction: row;
@@ -28,12 +28,12 @@
   text-transform: uppercase;
 }
 
-#menu .menu .menu-main-link {
+nav .menu .menu-main-link {
   color: #191347;
   align-items: center;
 }
 
-#menu .menu .menu-main-link a {
+nav .menu .menu-main-link a {
   display: flex;
   align-items: center;
   padding: 1.7rem 1rem;
@@ -47,7 +47,7 @@
   transition: all 0.2s ease-out;
 }
 
-#menu .menu .menu-main-link a .arrow-down {
+nav .menu .menu-main-link a .arrow-down {
   width: 0;
   height: 0;
   margin-left: .3rem;
@@ -56,33 +56,33 @@
   border-top: .25rem solid;
 }
 
-#menu .menu .menu-main-link a:hover {
+nav .menu .menu-main-link a:hover {
   background: #f2f2f2;
   color: #bc004c;
 }
 
-#menu .menu .menu-main-link:last-child {
+nav .menu .menu-main-link:last-child {
   display: flex;
   list-style-type: none;
 }
 
-#menu .menu .menu-main-link:last-child .menu-ticket a {
+nav .menu .menu-main-link:last-child .menu-ticket a {
   padding: .5rem 1rem;
   background-color: #bc004c;
   color: #fff;
 }
 
-#menu .menu .menu-main-link:last-child .menu-ticket a:hover {
+nav .menu .menu-main-link:last-child .menu-ticket a:hover {
   background: #a30042;
 }
 
-#menu .menu .menu-main-link:last-child .menu-lang a {
+nav .menu .menu-main-link:last-child .menu-lang a {
   margin: 1rem;
   padding: .3rem;
   border: 3px solid #e6e6e6;
 }
 
-#menu .menu .menu-main-link:last-child .menu-lang a:hover {
+nav .menu .menu-main-link:last-child .menu-lang a:hover {
   background: 3px solid #f2f2f2;
 }
 
@@ -91,6 +91,33 @@
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+header {
+  position: relative;
+  display: block;
+  margin-top: 75px;
+  background: url("../images/header/bg-header.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  padding: 50px;
+  text-align: center;
+}
+
+header .header-title {
+  display: inline-block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 800;
+  border-bottom: 3px solid #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
