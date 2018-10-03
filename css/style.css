@@ -213,6 +213,88 @@ header .header-title {
   border-bottom: 3px solid #fff;
 }
 
+container {
+  display: grid;
+  grid-template-areas: 'image form';
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5rem 0;
+}
+
+container [class*='box-'] {
+  display: flex;
+  justify-content: center;
+}
+
+container .box-image {
+  grid-area: image;
+}
+
+container .box-image img {
+  margin: auto;
+}
+
+container .box-form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 2em;
+  width: 75%;
+  max-width: 500px;
+  border: 3px solid #ef0060;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+container .box-form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+container .box-form label span {
+  margin: 1rem;
+  text-align: left;
+  line-height: 100%;
+}
+
+container .box-form input {
+  border: 1px solid grey;
+  border-radius: .1rem;
+  width: 90%;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+container .box-form input.hs-button {
+  width: 100%;
+  padding: .5rem 0;
+  border: 0;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ef0060;
+}
+
+container .box-form input.hs-button:hover {
+  background-color: #d60056;
+}
+
+container .box-form ul {
+  list-style-type: none;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+container .box-form ul.hs-error-msgs li label {
+  color: #ef0060;
+}
+
+container .box-form button {
+  display: block;
+  width: 100%;
+}
+
 footer {
   position: relative;
   z-index: 2;

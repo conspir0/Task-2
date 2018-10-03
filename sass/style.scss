@@ -39,6 +39,92 @@ header {
     }
 }
 
+// CONTAINER ------------------------------------------------------
+container {
+    display: grid;
+    grid-template-areas: 'image form';  
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 0;
+    
+    [class*='box-'] {
+        display: flex;
+        justify-content: center;
+    }
+    
+    // CONTAINER - image ------------------------------------------------------
+    .box-image {
+        grid-area: image;
+        
+        img {
+            margin: auto;
+        }
+    }
+    
+    // CONTAINER - form ------------------------------------------------------
+    .box-form {
+        grid-area: form;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 2em;
+        width: 75%;
+        max-width: 500px;
+        border: 3px solid $third-color;
+        text-align: center;
+        background-color: darken($primary-color, 5);
+        
+        label {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            span {
+                margin: 1rem;
+                text-align: left;
+                line-height: 100%;
+            }
+        }
+            
+        input {
+            border: 1px solid grey;
+            border-radius: .1rem;
+            width: 90%;
+            line-height: 1.5rem;
+            font-size: 1rem;
+            
+        }
+        
+        input.hs-button {
+            width: 100%;
+            padding: .5rem 0;
+            border: 0;
+            font-weight: 700;
+            color: $primary-color;
+            background-color: $third-color;
+            
+            &:hover {
+                background-color: darken($third-color, 5);
+            }
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 1rem 0;
+            max-width: 100%;
+        }
+        
+        ul.hs-error-msgs li label {
+            color: $third-color;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
 // FOOTER ------------------------------------------------------
 footer {
     position: relative;
