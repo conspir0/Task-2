@@ -1,12 +1,17 @@
 @include mobilePage {
     #menu {
-        .menu {
-            visibility: hidden;
-            flex-direction: column;
-            
+        .menu-burger-btn {
+            display: block;
+        }
+        
+        .menu-mobile {
             .show {
                 visibility: visible;
             }
+        }
+        
+        .menu {
+            visibility: hidden;  
         }
     }
     

@@ -2,7 +2,7 @@
 
 // Select DOM Items ---------------------------------------------
 const menuBtn = document.querySelector('.menu-burger-btn'),
-      menu = document.querySelector('.menu');
+      menu = document.querySelector('.menu-mobile');
 
 // Set Initial State of Menu ---------------------------------------------
 let showMenu = false;

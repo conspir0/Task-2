@@ -3,6 +3,7 @@
 @import 'config';
 @import 'menu';
 @import 'footer';
+@import 'menuRWD';
 @import 'footerRWD';
 
 * {
@@ -126,7 +127,5 @@ container {
         }
     }
 }
-
-
 
 @import 'mobile';

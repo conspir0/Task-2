@@ -1,0 +1,100 @@
+// Menu button ---------------------------------------------
+.menu-burger-btn {
+    position: absolute;
+    z-index: 3;
+    right: 1.5rem;
+    top: 1.5rem;;
+    cursor: pointer;
+    @include easeOut;
+    display: none;
+    
+    .btn-line {
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: $secondary-color;
+        @include easeOut;
+
+        &:hover {
+            background: $third-color;
+        }
+    }
+    
+    // Rotate Into X with menu lines ---------------------------------------------
+    &.close {
+        transform: rotate(180deg);
+        
+        .btn-line {
+            background: $third-color;
+            // Line 1 Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            // Line 2 Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            
+            // Line 3 Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
+
+// Menu overlay ---------------------------------------------
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 15vh;
+    background-color: darken($primary-color, 5);
+    text-align: center;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    overflow: auto;
+    @include easeOut;
+    
+    &.show {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .menu-link {
+        margin: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+    }
+    
+    ul, li {
+        list-style-type: none;
+        
+    }
+    
+    a {
+        font-size: .8rem;
+        font-weight: 300;
+        color: $secondary-color;
+        text-decoration: none;
+        @include easeOut;
+        
+        &:hover {
+            color: $third-color;
+            text-decoration: underline;
+        }
+    }
+    
+    p {
+        padding: .5rem 0;
+        text-transform: uppercase;
+    }
+}
