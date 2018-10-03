@@ -1,4 +1,4 @@
-// MENU ------------------------------------------------------
+// MENU - main ------------------------------------------------------
 
 nav {
     position: fixed;
@@ -6,14 +6,15 @@ nav {
     left: 0;
     right: 0;
     z-index: 100;
-//    max-width: 1600px;
+    margin: auto;
+    padding: 0 6vw;
+    width: 100%;
+    max-width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 6vw;
     height: 75px;
     background-color: $primary-color;
-
     
     // MENU - logo ------------------------------------------------------
     img {
@@ -25,16 +26,43 @@ nav {
     
     // MENU - boxes ------------------------------------------------------
     .menu {
-        background-color: $primary-color;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         list-style-type: none;
         text-transform: uppercase;
+        background-color: $primary-color;
         
-        .menu-main-link {
+        .menu-link {
+            align-items: center;
             color: $secondary-color;
-                align-items: center;
+            
+            // MENU - container attend - hover ------------------------------------------------------
+            &:hover .menu-link-container-attend {
+                display: flex;
+            }
+            
+            &:hover a {
+                background: darken($primary-color, 5);
+                color: $third-color;
+            }
+
+            &:hover a + .menu-link-container-attend li ul li a{
+                color: $secondary-color;
+            }
+            
+            &:hover a + .menu-link-container-attend li ul li a:hover{
+                color: $third-color;
+            }
+            
+            // MENU - container agenda - hover ------------------------------------------------------
+            &:hover .menu-link-container-agenda {
+                display: block;
+            }
+            
+            &:hover a + .menu-link-container-agenda li a:hover{
+                color: $third-color;
+            }
             
             a {
                 display: flex;
@@ -44,12 +72,12 @@ nav {
                 line-height: 100%;
                 text-decoration: none;
                 text-align: center;
-                color: $secondary-color;
-                font-weight: 700;
+                font-weight: 800;
                 font-size: 14px;
-                @include easeOut;
+                color: $secondary-color;
+                @include easeOut;            
                 
-                // MENU - boxes(arrow) ------------------------------------------------------
+                // MENU - boxes(arrow)  -> ------------------------------------------------------
                 .arrow-down {
                     width: 0; 
                     height: 0;
@@ -59,10 +87,77 @@ nav {
 
                     border-top: .25rem solid;
                 }
+                // MENU - boxes(arrow)  <- ------------------------------------------------------                
+            }
+            
+            // MENU - container attend  ------------------------------------------------------                
+            .menu-link-container-attend {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                margin: auto;
+                padding: 0 6vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                list-style-type: none;
+                background: darken($primary-color, 5);
+                display: none;
                 
-                &:hover {
-                    background: darken($primary-color, 5);
+                li {
+                    padding: 1.4rem 0;
+                    font-size: 1.3rem;
                     color: $third-color;
+                    width: 25%;
+                    list-style-type: none;
+                    
+                    p {
+                        font-size: 20px;
+                        padding: 0 1rem 1.5rem 0;
+                    }
+                    
+                    ul li{
+                        display: block;
+                        width: 100%;
+                        padding: 0;
+                        
+                        a {
+                            padding: 0 1rem 0 0;
+                            line-height: 2rem;
+                            font-size: .9rem;
+                            font-weight: 800;
+                            text-align: left;
+                            
+                            i {
+                                padding: .2rem 0 .2rem .5rem;
+                                font-size: .8rem;
+                                color: $third-color;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // MENU - container agenda  ------------------------------------------------------                
+            .menu-link-container-agenda {
+                position: absolute;
+                display: block;
+                padding: 1rem;
+                background: darken($primary-color, 5);
+                display: none;
+                
+                li {
+                    font-size: 1.3rem;
+                    color: $third-color;
+                    list-style-type: none;
+                        
+                    a {
+                        padding: 0 1rem 0 0;
+                        width: 9rem;
+                        line-height: 2rem;
+                        font-size: .9rem;
+                        color: $secondary-color;
+                    }
                 }
             }
             
@@ -74,8 +169,8 @@ nav {
                 // MENU - box Ticket ------------------------------------------------------
                 .menu-ticket a {
                     padding: .5rem 1rem;
-                    background-color: $third-color;
                     color: $primary-color;
+                    background-color: $third-color;
                     
                     &:hover {
                         background: darken($third-color, 5);

@@ -4,10 +4,13 @@ nav {
   left: 0;
   right: 0;
   z-index: 100;
+  margin: auto;
+  padding: 0 6vw;
+  width: 100%;
+  max-width: 1600px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 6vw;
   height: 75px;
   background-color: #fff;
 }
@@ -20,20 +23,45 @@ nav img {
 }
 
 nav .menu {
-  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
   text-transform: uppercase;
+  background-color: #fff;
 }
 
-nav .menu .menu-main-link {
-  color: #191347;
+nav .menu .menu-link {
   align-items: center;
+  color: #191347;
 }
 
-nav .menu .menu-main-link a {
+nav .menu .menu-link:hover .menu-link-container-attend {
+  display: flex;
+}
+
+nav .menu .menu-link:hover a {
+  background: #f2f2f2;
+  color: #ef0060;
+}
+
+nav .menu .menu-link:hover a + .menu-link-container-attend li ul li a {
+  color: #191347;
+}
+
+nav .menu .menu-link:hover a + .menu-link-container-attend li ul li a:hover {
+  color: #ef0060;
+}
+
+nav .menu .menu-link:hover .menu-link-container-agenda {
+  display: block;
+}
+
+nav .menu .menu-link:hover a + .menu-link-container-agenda li a:hover {
+  color: #ef0060;
+}
+
+nav .menu .menu-link a {
   display: flex;
   align-items: center;
   padding: 1.7rem 1rem;
@@ -41,13 +69,13 @@ nav .menu .menu-main-link a {
   line-height: 100%;
   text-decoration: none;
   text-align: center;
-  color: #191347;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
+  color: #191347;
   transition: all 0.2s ease-out;
 }
 
-nav .menu .menu-main-link a .arrow-down {
+nav .menu .menu-link a .arrow-down {
   width: 0;
   height: 0;
   margin-left: .3rem;
@@ -56,33 +84,97 @@ nav .menu .menu-main-link a .arrow-down {
   border-top: .25rem solid;
 }
 
-nav .menu .menu-main-link a:hover {
+nav .menu .menu-link .menu-link-container-attend {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  padding: 0 6vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
   background: #f2f2f2;
-  color: #bc004c;
+  display: none;
 }
 
-nav .menu .menu-main-link:last-child {
+nav .menu .menu-link .menu-link-container-attend li {
+  padding: 1.4rem 0;
+  font-size: 1.3rem;
+  color: #ef0060;
+  width: 25%;
+  list-style-type: none;
+}
+
+nav .menu .menu-link .menu-link-container-attend li p {
+  font-size: 20px;
+  padding: 0 1rem 1.5rem 0;
+}
+
+nav .menu .menu-link .menu-link-container-attend li ul li {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+nav .menu .menu-link .menu-link-container-attend li ul li a {
+  padding: 0 1rem 0 0;
+  line-height: 2rem;
+  font-size: .9rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+nav .menu .menu-link .menu-link-container-attend li ul li a i {
+  padding: .2rem 0 .2rem .5rem;
+  font-size: .8rem;
+  color: #ef0060;
+}
+
+nav .menu .menu-link .menu-link-container-agenda {
+  position: absolute;
+  display: block;
+  padding: 1rem;
+  background: #f2f2f2;
+  display: none;
+}
+
+nav .menu .menu-link .menu-link-container-agenda li {
+  font-size: 1.3rem;
+  color: #ef0060;
+  list-style-type: none;
+}
+
+nav .menu .menu-link .menu-link-container-agenda li a {
+  padding: 0 1rem 0 0;
+  width: 9rem;
+  line-height: 2rem;
+  font-size: .9rem;
+  color: #191347;
+}
+
+nav .menu .menu-link:last-child {
   display: flex;
   list-style-type: none;
 }
 
-nav .menu .menu-main-link:last-child .menu-ticket a {
+nav .menu .menu-link:last-child .menu-ticket a {
   padding: .5rem 1rem;
-  background-color: #bc004c;
   color: #fff;
+  background-color: #ef0060;
 }
 
-nav .menu .menu-main-link:last-child .menu-ticket a:hover {
-  background: #a30042;
+nav .menu .menu-link:last-child .menu-ticket a:hover {
+  background: #d60056;
 }
 
-nav .menu .menu-main-link:last-child .menu-lang a {
+nav .menu .menu-link:last-child .menu-lang a {
   margin: 1rem;
   padding: .3rem;
   border: 3px solid #e6e6e6;
 }
 
-nav .menu .menu-main-link:last-child .menu-lang a:hover {
+nav .menu .menu-link:last-child .menu-lang a:hover {
   background: 3px solid #f2f2f2;
 }
 
