@@ -6,3 +6,10 @@ $fourth-color: #22b5eb;
 @mixin easeOut {
     transition: all 0.2s ease-out;
 }
+
+// Media Query Mixins
+@mixin mobilePage {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}

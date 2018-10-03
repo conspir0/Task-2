@@ -1,0 +1,60 @@
+@include mobilePage {
+    #menu {
+        .menu {
+            visibility: hidden;
+            flex-direction: column;
+            
+            .show {
+                visibility: visible;
+            }
+        }
+    }
+    
+    main {
+        header#header {
+            .header-title {
+                font-size: 5vw;
+            }
+        }
+        
+        container {
+            grid-template-areas: 
+                'image'
+                'form';  
+            grid-template-columns: 1fr;
+            padding: 0;
+            
+            [class*='box-'] {
+                margin: 5vw auto;
+            }
+            
+            .box-image {
+                margin: 10vw auto;
+            }
+            
+            // CONTAINER - form ------------------------------------------------------
+            .box-form {                
+                h2 {
+                    font-size: 3.5vw;
+                }
+
+                label span{            
+                    margin: .5rem;
+                }
+
+                ul {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
+    #footer {
+        .box-container {
+            display: none;
+        }
+        .module-list {
+            display: block;
+        }
+    }
+}

@@ -191,3 +191,49 @@ nav {
         }
     }
 }
+
+// Menu button ---------------------------------------------
+.menu-burger-btn {
+    position: absolute;
+    z-index: 3;
+    right: 1.5rem;
+    top: 1.5rem;;
+    cursor: pointer;
+    @include easeOut;
+//    display: none;
+    
+    .btn-line {
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: $secondary-color;
+        @include easeOut;
+
+        &:hover {
+            background: $third-color;
+        }
+    }
+    
+    // Rotate Into X with menu lines ---------------------------------------------
+    &.close {
+        transform: rotate(180deg);
+        
+        .btn-line {
+            background: $third-color;
+            // Line 1 Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            // Line 2 Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            
+            // Line 3 Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
