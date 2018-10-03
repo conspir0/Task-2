@@ -181,7 +181,7 @@ nav .menu .menu-link:last-child .menu-lang a:hover {
 footer {
   position: relative;
   z-index: 2;
-  background: url("../images/footer/bg-footer.webp") top center;
+  background: url("../images/footer/bg-footer.png") top center;
   background-size: cover;
   padding-top: 1rem;
   overflow: hidden;
