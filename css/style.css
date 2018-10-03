@@ -346,13 +346,12 @@ footer .box-container .box-5 .socials-icon .btns-facebook .btn-like, footer .box
 .menu-mobile {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 15vh;
   background-color: #f2f2f2;
   text-align: center;
   visibility: hidden;
@@ -372,6 +371,10 @@ footer .box-container .box-5 .socials-icon .btns-facebook .btn-like, footer .box
   font-weight: 700;
   letter-spacing: .2rem;
   text-transform: uppercase;
+}
+
+.menu-mobile img {
+  margin: auto;
 }
 
 .menu-mobile ul, .menu-mobile li {
